@@ -11,12 +11,12 @@ public class DimenGenerator {
     /**
      * 设计稿尺寸(将自己设计师的设计稿的宽度填入)
      */
-    private static final int DESIGN_WIDTH = 375;
+    private static final int DESIGN_WIDTH = 1080;
 
     /**
      * 设计稿的高度  （将自己设计师的设计稿的高度填入）
      */
-    private static final int DESIGN_HEIGHT = 667;
+    private static final int DESIGN_HEIGHT = 1920;
 
 
     public static void main(String[] args) {
