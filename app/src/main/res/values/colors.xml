@@ -3,4 +3,22 @@
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
+
+    <color name="style_red">#E2282A</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black_333333">#333333</color>
+    <color name="black_444444">#444444</color>
+    <color name="yello_FF9900">#FFFF9900</color>
+    <color name="black_FFFFFFFF">#FFFFFFFF</color>
+    <color name="black_F5F5F5">#F5F5F5</color>
+    <color name="black_525252">#525252</color>
+    //login
+    <color name="black_50FFFFFF">#50000000</color>
+    <color name="write_C7C7CC">#C7C7CC</color>
+    <color name="yello_FF951E">#FF951E</color>
+    <color name="yello_FFBA15">#FFBA15</color>
+
+
+
+
 </resources>
