@@ -6,4 +6,6 @@
     <string name="login_hin_phone">请输入11位手机号码</string>
     <string name="login_hin_yzm">请输入验证码</string>
     <string name="login_hq_yzm">获取验证码</string>
+    <string name="login_sign_in">登录</string>
+    <string name="login_guize">登录即代表您同意《xx用户协议》</string>
 </resources>
