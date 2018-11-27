@@ -4,9 +4,9 @@
     android:useLevel="true">
     <solid android:color="@color/black_50FFFFFF" />
     <corners
-        android:bottomLeftRadius="@dimen/qb_px_2"
-        android:bottomRightRadius="@dimen/qb_px_2"
-        android:topLeftRadius="@dimen/qb_px_2"
-        android:topRightRadius="@dimen/qb_px_2" />
+        android:bottomLeftRadius="@dimen/qb_px_6"
+        android:bottomRightRadius="@dimen/qb_px_6"
+        android:topLeftRadius="@dimen/qb_px_6"
+        android:topRightRadius="@dimen/qb_px_6" />
 
 </shape>

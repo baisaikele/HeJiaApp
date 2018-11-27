@@ -5,8 +5,8 @@
         android:endColor="@color/yello_FF951E"
         android:startColor="@color/yello_FFBA15" />
     <corners
-        android:bottomLeftRadius="@dimen/qb_px_20"
-        android:bottomRightRadius="@dimen/qb_px_20"
-        android:topLeftRadius="@dimen/qb_px_20"
-        android:topRightRadius="@dimen/qb_px_20" />
+        android:bottomLeftRadius="@dimen/qb_px_60"
+        android:bottomRightRadius="@dimen/qb_px_60"
+        android:topLeftRadius="@dimen/qb_px_60"
+        android:topRightRadius="@dimen/qb_px_60" />
 </shape>
