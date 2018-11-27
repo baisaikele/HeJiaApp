@@ -8,6 +8,7 @@
     tools:context=".activity.LoginActivity">
 
     <ImageView
+        android:id="@+id/img_dissmiss"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
@@ -54,8 +55,9 @@
             android:inputType="number"
             android:lines="1"
             android:maxLength="11"
-            android:textColor="@color/black_50FFFFFF"
+            android:textColor="@color/yello_FFBA15"
             android:textColorHint="@color/write_C7C7CC"
+            android:textCursorDrawable="@drawable/edit_gb"
             android:textSize="14sp" />
 
 
@@ -93,8 +95,9 @@
             android:lines="1"
             android:maxLength="4"
             android:maxWidth="@dimen/qb_px_170"
-            android:textColor="@color/black_50FFFFFF"
+            android:textColor="@color/yello_FFBA15"
             android:textColorHint="@color/write_C7C7CC"
+            android:textCursorDrawable="@drawable/edit_gb"
             android:textSize="14sp" />
 
 

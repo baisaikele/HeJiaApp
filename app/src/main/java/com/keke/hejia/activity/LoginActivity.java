@@ -2,16 +2,32 @@ package com.keke.hejia.activity;
 
 import android.os.Build;
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
+import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.keke.hejia.R;
 import com.keke.hejia.base.BaseActivity;
+import com.keke.hejia.util.ToastUitl;
 
+import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 public class LoginActivity extends BaseActivity {
+
+    @BindView(R.id.icon_img)
+    ImageView iconImg;
+    @BindView(R.id.edit_sr_phone)
+    EditText editSrPhone;
+    @BindView(R.id.edit_sms_code)
+    EditText editSmsCode;
+    @BindView(R.id.tv_sms)
+    TextView tvSms;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,6 +66,87 @@ public class LoginActivity extends BaseActivity {
         setFitSystemWindow(true);
     }
 
+    @OnClick({R.id.img_dissmiss, R.id.bt_sign_in, R.id.img_wx, R.id.tv_sms})
+    public void onViewClicked(View view) {
+        switch (view.getId()) {
+            case R.id.img_dissmiss:
+                break;
+            case R.id.bt_sign_in:
+                if (editSrPhone.getText().toString().equals("") || editSmsCode.getText().toString().equals("")) {
+                    ToastUitl.show("请输入信息", 2);
+                    return;
+                }
+
+                break;
+            case R.id.img_wx:
+                ToastUitl.show("目前不支持微信！！", 2);
+                break;
+            case R.id.tv_sms:
+                if ("".equals(editSrPhone.getText().toString())) {
+                    ToastUitl.show("请输入手机号", 2);
+                    return;
+                }
+                restart();
+                tvSms.setBackgroundResource(R.drawable.text_share_false);
+                break;
+        }
+    }
+
+
+    //释放倒计时器
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        if (timer != null) {
+            timer.cancel();
+            timer = null;
+        }
+    }
+
+    //倒计时器
+
+    /**
+     * 取消倒计时
+     *
+     * @param v
+     */
+    public void oncancel(View v) {
+        timer.cancel();
+    }
+
+    /**
+     * 开始倒计时
+     */
+    public void restart() {
+        timer.start();
+    }
+
+    @Override
+    public void onBackPressed() {
+
+    }
+
+    private CountDownTimer timer = new CountDownTimer(60000, 1000) {
+
+        @Override
+        public void onTick(long millisUntilFinished) {
+            if (tvSms == null) {
+                return;
+            }
+            tvSms.setText("" + (millisUntilFinished / 1000) + "秒");
+        }
+
+        @Override
+        public void onFinish() {
+            if (tvSms == null) {
+                return;
+            }
+            tvSms.setEnabled(true);
+            tvSms.setBackgroundResource(R.drawable.text_bangding_shouji);
+            tvSms.setText("获取验证码");
+        }
+    };
+
 
     /**
      * 如果需要内容紧贴着StatusBar
@@ -79,4 +176,5 @@ public class LoginActivity extends BaseActivity {
             // getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);
         }
     }
+
 }
