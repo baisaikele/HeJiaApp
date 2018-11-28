@@ -9,4 +9,15 @@
     <string name="login_sign_in">登录</string>
     <string name="login_guize">登录即代表您同意《xx用户协议》</string>
     <string name="title_activity_wsxx">完善信息</string>
+
+
+    <string name="perfect_show_xingbie">选择性别</string>
+    <string name="perfect_show_tishi_name">你的昵称</string>
+    <string name="perfect_show_birthdy">出生日期</string>
+    <string name="perfect_show_name">请输入昵称</string>
+    <string name="perfect_show_tishi">*注册成功后，性别不可修改</string>
+    <string name="perfect_data">2000-11-11</string>
+    <string name="perfect_man">男</string>
+    <string name="perfect_wuman">女</string>
+
 </resources>
