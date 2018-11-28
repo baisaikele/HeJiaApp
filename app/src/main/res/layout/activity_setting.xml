@@ -256,7 +256,7 @@
                 android:layout_centerHorizontal="true"
                 android:layout_marginBottom="@dimen/qb_px_24"
                 android:background="@drawable/text_bangding_shouji"
-                android:text="@string/setting_tuichu"
+                android:text="@string/setting_tuichudl"
                 android:textColor="@color/white"
                 android:textSize="16sp" />
         </RelativeLayout>

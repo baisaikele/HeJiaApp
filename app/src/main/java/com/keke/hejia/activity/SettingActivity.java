@@ -6,6 +6,7 @@ import android.widget.TextView;
 
 import com.keke.hejia.R;
 import com.keke.hejia.base.BaseActivity;
+import com.keke.hejia.base.LauncherActivity;
 import com.keke.hejia.util.ToastUitl;
 import com.keke.hejia.widget.TitleBuilder;
 
@@ -75,6 +76,7 @@ public class SettingActivity extends BaseActivity {
             case R.id.tv_phone_bangding_setting: //绑定手机
                 break;
             case R.id.rl_ghysjt_setting:  //退出原生
+                LauncherActivity.goToChangeHomeActivity(SettingActivity.this);
                 break;
             case R.id.rl_ghxsjt_setting:   //退出新生
                 break;

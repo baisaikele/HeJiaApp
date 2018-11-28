@@ -27,9 +27,15 @@
     <string name="setting_tuichu_xin">更换/退出新生家庭</string>
     <string name="setting_guanyuwomen">关于我们</string>
     <string name="setting_lianxiwomen">联系我们</string>
-    <string name="setting_tuichu">退出登录</string>
+    <string name="setting_tuichudl">退出登录</string>
     <string name="setting_yibangding">已绑定</string>
     <string name="setting_weibangding">未绑定</string>
 
+    <string name="changeHome_sure">确定</string>
+    <string name="changeHome_login_out">退出</string>
+    <string name="changeHome_genghuan_ys">更换原生家庭</string>
+    <string name="changeHome_tuichuyansheng">退出原生家庭</string>
+    <string name="changeHome_shuru_phone">输入家庭号码</string>
+    <string name="changeHome_title">更换/退出家庭</string>
 
 </resources>
