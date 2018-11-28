@@ -20,4 +20,16 @@
     <string name="perfect_man">男</string>
     <string name="perfect_wuman">女</string>
 
+    <string name="setting">设置</string>
+    <string name="setting_weixin">微信</string>
+    <string name="setting_phone">手机号</string>
+    <string name="setting_tuichu_yuan">更换/退出原生家庭</string>
+    <string name="setting_tuichu_xin">更换/退出新生家庭</string>
+    <string name="setting_guanyuwomen">关于我们</string>
+    <string name="setting_lianxiwomen">联系我们</string>
+    <string name="setting_tuichu">退出登录</string>
+    <string name="setting_yibangding">已绑定</string>
+    <string name="setting_weibangding">未绑定</string>
+
+
 </resources>

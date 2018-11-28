@@ -13,19 +13,23 @@
         android:background="@color/white"
         android:orientation="vertical">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="@dimen/qb_px_16"
-            android:text="完善信息"
-            android:textColor="@color/yello_FFA643"
-            android:textSize="17sp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/qb_px_44"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/title_activity_wsxx"
+                android:textColor="@color/yello_FFA643"
+                android:textSize="17sp" />
+        </LinearLayout>
+
 
         <View
             android:layout_width="match_parent"
             android:layout_height="@dimen/qb_px_1"
-            android:layout_marginTop="@dimen/qb_px_13"
             android:background="@color/white_f2f2f2" />
 
 

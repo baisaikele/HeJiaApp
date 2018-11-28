@@ -30,11 +30,12 @@
             android:theme="@style/loginTheme" />
         <activity
             android:name=".activity.LoginActivity"
-            android:screenOrientation="portrait">
-
-        </activity>
+            android:screenOrientation="portrait"></activity>
         <activity
             android:name=".activity.PerfectActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".activity.SettingActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
