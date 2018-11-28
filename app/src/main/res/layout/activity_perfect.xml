@@ -4,6 +4,194 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".activity.PerfectActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/qb_px_16"
+            android:text="完善信息"
+            android:textColor="@color/yello_FFA643"
+            android:textSize="17sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/qb_px_1"
+            android:layout_marginTop="@dimen/qb_px_13"
+            android:background="@color/white_f2f2f2" />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/qb_px_56"
+            android:layout_marginTop="@dimen/qb_px_1">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="16dp"
+                android:text="@string/perfect_show_xingbie"
+                android:textColor="@color/black_333333"
+                android:textSize="16sp" />
+
+            <RadioGroup
+                android:id="@+id/radio_group_perfect"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/qb_px_16"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/radio_button_nan_perfect"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/qb_px_24"
+                    android:button="@drawable/radio_button_select"
+                    android:paddingLeft="@dimen/qb_px_10"
+                    android:text="@string/perfect_man"
+                    android:textColor="@color/black_333333"
+                    android:textSize="16sp" />
+
+                <RadioButton
+                    android:id="@+id/radio_button_nv_perfect"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/radio_button_select"
+                    android:paddingLeft="@dimen/qb_px_10"
+                    android:text="@string/perfect_wuman"
+                    android:textColor="@color/black_333333"
+                    android:textSize="16sp" />
+
+            </RadioGroup>
+        </RelativeLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/qb_px_1"
+            android:layout_marginLeft="@dimen/qb_px_16"
+            android:background="@color/white_f2f2f2" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/qb_px_56"
+            android:layout_marginTop="@dimen/qb_px_1">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="16dp"
+                android:text="@string/perfect_show_tishi_name"
+                android:textColor="@color/black_333333"
+                android:textSize="16sp" />
+
+
+            <EditText
+                android:id="@+id/edit_name_perfect"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/qb_px_16"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:hint="@string/perfect_show_name"
+                android:lines="1"
+                android:maxWidth="@dimen/qb_px_130"
+                android:textColorHint="@color/white_BBBBBB"
+                android:textSize="16sp" />
+
+
+        </RelativeLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/qb_px_1"
+            android:layout_marginLeft="@dimen/qb_px_16"
+            android:background="@color/white_f2f2f2" />
+
+        <RelativeLayout
+            android:id="@+id/rl_data_perfect"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/qb_px_56"
+            android:layout_marginTop="@dimen/qb_px_1">
+
+
+            <TextView
+                android:id="@+id/tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="16dp"
+                android:text="@string/perfect_show_birthdy"
+                android:textColor="@color/black_333333"
+                android:textSize="16sp" />
+
+
+            <TextView
+                android:id="@+id/tv_data"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/qb_px_34"
+                android:gravity="center_vertical"
+                android:text="@string/perfect_data"
+                android:textColor="@color/white_BBBBBB"
+                android:textSize="16sp" />
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/qb_px_16"
+                android:src="@drawable/more" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/qb_px_1"
+            android:layout_marginLeft="@dimen/qb_px_16"
+            android:background="@color/white_f2f2f2" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/qb_px_16"
+            android:layout_marginTop="@dimen/qb_px_20"
+            android:text="@string/perfect_show_tishi"
+            android:textColor="#AAAAAA"
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@+id/bt_sign_in_perfect"
+            android:layout_width="@dimen/qb_px_190"
+            android:layout_height="@dimen/qb_px_40"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/qb_px_71"
+            android:background="@drawable/bt_login_bj_jb"
+            android:text="@string/login_sign_in"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+    </LinearLayout>
 
 </RelativeLayout>
