@@ -14,6 +14,7 @@
         android:orientation="vertical">
 
         <LinearLayout
+            android:visibility="gone"
             android:layout_width="match_parent"
             android:layout_height="@dimen/qb_px_44"
             android:gravity="center">
@@ -25,6 +26,8 @@
                 android:textColor="@color/yello_FFA643"
                 android:textSize="17sp" />
         </LinearLayout>
+
+        <include layout="@layout/activity_title" />
 
 
         <View

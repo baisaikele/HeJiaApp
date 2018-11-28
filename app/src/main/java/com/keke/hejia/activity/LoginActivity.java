@@ -143,7 +143,7 @@ public class LoginActivity extends BaseActivity {
             }
             tvSms.setEnabled(true);
             tvSms.setBackgroundResource(R.drawable.text_bangding_shouji);
-            tvSms.setText("获取验证码");
+            tvSms.setText(getString(R.string.login_hq_yzm));
         }
     };
 

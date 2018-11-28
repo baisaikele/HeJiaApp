@@ -19,6 +19,7 @@ import android.widget.TextView;
 import com.keke.hejia.R;
 import com.keke.hejia.base.BaseActivity;
 import com.keke.hejia.util.ToastUitl;
+import com.keke.hejia.widget.TitleBuilder;
 
 import java.util.Calendar;
 
@@ -88,6 +89,8 @@ public class PerfectActivity extends BaseActivity {
                 }
             }
         });
+        //显示title文字
+        new TitleBuilder(this).setTitleText(getString(R.string.title_activity_wsxx));
     }
 
 

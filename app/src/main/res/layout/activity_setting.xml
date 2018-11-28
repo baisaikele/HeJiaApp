@@ -12,10 +12,12 @@
         android:background="@color/white"
         android:orientation="vertical">
 
+        <include layout="@layout/activity_title" />
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="@dimen/qb_px_44">
+            android:layout_height="@dimen/qb_px_44"
+            android:visibility="gone">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -29,7 +31,7 @@
                 android:id="@+id/img_setting_fh"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-               android:layout_centerVertical="true"
+                android:layout_centerVertical="true"
                 android:layout_marginLeft="@dimen/qb_px_16"
                 android:background="@drawable/title_fanhui" />
         </RelativeLayout>
