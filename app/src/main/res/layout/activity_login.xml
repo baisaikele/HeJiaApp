@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_bj"
+    tools:context=".activity.LoginActivity">
+
+    <ImageView
+        android:id="@+id/img_dissmiss"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/qb_px_20"
+        android:layout_marginTop="@dimen/qb_px_25"
+        android:background="@drawable/icon_guanbi" />
+
+    <ImageView
+        android:id="@+id/icon_img"
+        android:layout_width="@dimen/qb_px_73"
+        android:layout_height="@dimen/qb_px_74"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/qb_px_75"
+        android:background="@color/colorPrimary" />
+
+
+    <RelativeLayout
+        android:id="@+id/rl_phone"
+        android:layout_width="@dimen/qb_px_335"
+        android:layout_height="@dimen/qb_px_52"
+        android:layout_below="@+id/icon_img"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/qb_px_51"
+        android:background="@drawable/lin_bj_shape">
+
+
+        <ImageView
+            android:id="@+id/img_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/qb_px_17"
+            android:background="@drawable/shouji_login" />
+
+        <EditText
+            android:id="@+id/edit_sr_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/qb_px_35"
+            android:layout_toRightOf="@id/img_phone"
+            android:background="@null"
+            android:digits="1234567890"
+            android:hint="@string/login_hin_phone"
+            android:inputType="number"
+            android:lines="1"
+            android:maxLength="11"
+            android:textColor="@color/yello_FFBA15"
+            android:textColorHint="@color/write_C7C7CC"
+            android:textCursorDrawable="@drawable/edit_gb"
+            android:textSize="14sp" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_sms"
+        android:layout_width="@dimen/qb_px_335"
+        android:layout_height="@dimen/qb_px_52"
+        android:layout_below="@+id/rl_phone"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/qb_px_21"
+        android:background="@drawable/lin_bj_shape">
+
+        <ImageView
+            android:id="@+id/img_suo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/qb_px_17"
+            android:background="@drawable/suo_login" />
+
+
+        <EditText
+            android:id="@+id/edit_sms_code"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/qb_px_35"
+            android:layout_toRightOf="@id/img_suo"
+            android:background="@null"
+            android:digits="1234567890"
+            android:gravity="center_vertical"
+            android:hint="@string/login_hin_yzm"
+            android:inputType="number"
+            android:lines="1"
+            android:maxLength="4"
+            android:maxWidth="@dimen/qb_px_170"
+            android:textColor="@color/yello_FFBA15"
+            android:textColorHint="@color/write_C7C7CC"
+            android:textCursorDrawable="@drawable/edit_gb"
+            android:textSize="14sp" />
+
+
+        <TextView
+            android:id="@+id/tv_sms"
+            android:layout_width="@dimen/qb_px_88"
+            android:layout_height="@dimen/qb_px_28"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/qb_px_8"
+            android:background="@drawable/text_bangding_shouji"
+            android:gravity="center"
+            android:text="@string/login_hq_yzm"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/bt_sign_in"
+        android:layout_width="@dimen/qb_px_190"
+        android:layout_height="@dimen/qb_px_40"
+        android:layout_below="@+id/rl_sms"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/qb_px_71"
+        android:background="@drawable/bt_login_bj_jb"
+        android:gravity="center"
+        android:text="@string/login_sign_in"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+
+    <RelativeLayout
+        android:id="@+id/rl_wx_sign"
+        android:layout_width="@dimen/qb_px_230"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bt_sign_in"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/qb_px_73">
+
+        <View
+            android:layout_width="@dimen/qb_px_70"
+            android:layout_height="@dimen/qb_px_1"
+            android:layout_centerVertical="true"
+            android:background="@color/write_C7C7CC" />
+
+        <ImageView
+            android:id="@+id/img_wx"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/weixin" />
+
+        <View
+            android:layout_width="@dimen/qb_px_70"
+            android:layout_height="@dimen/qb_px_1"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@color/write_C7C7CC" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_wx_sign"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/qb_px_51"
+        android:text="@string/login_guize"
+        android:textColor="@color/white"
+        android:textSize="12sp" />
+</RelativeLayout>
