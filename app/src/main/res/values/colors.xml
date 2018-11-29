@@ -24,6 +24,7 @@
     <color name="white_BBBBBB">#BBBBBB</color>
     <color name="white_AAAAAA">#AAAAAA</color>
 
-    <color name="white_f2f2f22">#F2F2F2</color>
+    <color name="white_F2F2F2">#F2F2F2</color>
+    <color name="black_4A4A4A">#4A4A4A</color>
 
 </resources>

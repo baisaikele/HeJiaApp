@@ -93,14 +93,14 @@
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
                     android:layout_marginLeft="16dp"
-                    android:background="@color/white_f2f2f22"
+                    android:background="@color/white_F2F2F2"
                     android:text="@string/invitation_code"
                     android:textColor="@color/black_333333"
                     android:textSize="16sp" />
 
 
                 <TextView
-                    android:background="@color/white_f2f2f22"
+                    android:background="@color/white_F2F2F2"
                     android:id="@+id/tv_yqm_code"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"

@@ -50,7 +50,7 @@ public class TitleBuilder {
     }
 
     /**
-     * 用于设置标题栏右边图片的单击事件
+     * 用于设置标题栏右边单击事件
      */
     public TitleBuilder setRightTextListening(View.OnClickListener listener) {
         if (textRight.getVisibility() == View.VISIBLE) {

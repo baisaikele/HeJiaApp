@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/join_dialog_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/join_dialog_face"
+            android:layout_width="@dimen/qb_px_42"
+            android:layout_height="@dimen/qb_px_42"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/radio_button_true" />
+
+        <TextView
+            android:id="@+id/join_dialog_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/join_dialog_face"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/qb_px_9"
+            android:text="你好"
+            android:textColor="@color/black_4A4A4A"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/join_dialog_role"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/join_dialog_name"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/qb_px_2"
+            android:text="父亲"
+            android:textColor="@color/white_AAAAAA"
+            android:textSize="10sp" />
+    </RelativeLayout>
+</RelativeLayout>

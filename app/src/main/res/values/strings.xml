@@ -38,7 +38,7 @@
     <string name="changeHome_shuru_phone">输入家庭号码</string>
     <string name="changeHome_title">更换/退出家庭</string>
 
-    //etit And   editName
+    //etit And editName
     <string name="etit_title">编辑资料</string>
     <string name="etit_face">头像</string>
     <string name="etit_name">昵称</string>
@@ -54,4 +54,26 @@
     <string name="invitation_tips_baohuyaoqingma">请保护好您的邀请码，不要泄漏给其他人。</string>
     <string name="invitation_code">邀请码：</string>
     <string name="invitation_copy">复制</string>
+
+
+    <string name="joinfamily_title">加入家庭</string>
+    <string name="joinfamily_title_tiaoguo">跳过</string>
+    <string name="joinfamily_yqjr">邀请家人加入家庭</string>
+    <string name="joinfamily_qyq">去邀请</string>
+    <string name="joinfamily_jrys">加入我的原生家庭</string>
+    <string name="joinfamily_jrxs">加入我的新生家庭</string>
+    <string name="joinfamily_srys">输入原生家庭邀请码</string>
+    <string name="joinfamily_zenmwan">怎么玩？</string>
+    <string name="joinfamily_cg">恭喜你，你已加入原生家庭</string>
+    <string name="joinfamily_tg">跳过后，如希望加入家庭请去我的-设置里面操作</string>
+
+
+    <string name="joinfamily_dialog_title">是否加入该家庭？</string>
+    <string name="joinfamily_dialog_yd">邀请你加入他的家庭</string>
+    <string name="joinfamily_dialog_juese">你在家庭中的角色是</string>
+    <string name="joinfamily_dialog_muqian">目前加入的人有</string>
+    <string name="joinfamily_dialog_quit">取消</string>
+    <string name="joinfamily_dialog_sure">是的</string>
+
+
 </resources>
