@@ -14,6 +14,12 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
+/**
+ * 2019/11/29
+ * 更换、退出家庭
+ * 张宇
+ **/
+
 public class ChangeHomeActivity extends BaseActivity {
 
     @BindView(R.id.change_home_num)

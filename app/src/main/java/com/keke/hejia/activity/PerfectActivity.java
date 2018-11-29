@@ -26,7 +26,11 @@ import java.util.Calendar;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
-
+/**
+ * 2019/11/29
+ * 完善资料
+ * 张宇
+ **/
 public class PerfectActivity extends BaseActivity {
 
 

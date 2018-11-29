@@ -14,6 +14,12 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
+/**
+ * 2019/11/29
+ * 设置
+ * 张宇
+ **/
+
 public class SettingActivity extends BaseActivity {
 
 

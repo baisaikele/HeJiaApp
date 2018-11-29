@@ -16,6 +16,11 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
+/**
+ * 2019/11/29
+ * 编辑原生家庭
+ * 张宇
+ **/
 public class InvitationActivity extends BaseActivity {
 
     @BindView(R.id.img_invitation_wxyaoqing)

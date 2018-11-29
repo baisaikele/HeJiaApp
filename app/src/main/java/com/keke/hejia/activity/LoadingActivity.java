@@ -9,7 +9,11 @@ import android.view.View;
 
 import com.keke.hejia.R;
 import com.keke.hejia.base.BaseActivity;
-
+/**
+ * 2019/11/29
+ * 启动页
+ * 张宇
+ **/
 public class LoadingActivity extends BaseActivity {
 
     @Override

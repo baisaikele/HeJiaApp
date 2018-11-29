@@ -14,6 +14,12 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
+
+/**
+ * 2019/11/29
+ * 编辑昵称
+ * 张宇
+ **/
 public class EditNameActivity extends BaseActivity {
 
     @BindView(R.id.edit_name_edit)

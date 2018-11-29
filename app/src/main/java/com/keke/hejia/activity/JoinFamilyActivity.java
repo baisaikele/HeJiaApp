@@ -21,7 +21,11 @@ import com.keke.hejia.widget.TitleBuilder;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
-
+/**
+ * 2019/11/29
+ * 加入家庭
+ * 张宇
+ **/
 public class JoinFamilyActivity extends BaseActivity {
 
     @BindView(R.id.title_leftIco)

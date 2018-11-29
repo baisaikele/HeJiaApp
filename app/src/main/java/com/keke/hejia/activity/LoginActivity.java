@@ -17,7 +17,11 @@ import com.keke.hejia.util.ToastUitl;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
-
+/**
+ * 2019/11/29
+ * 登录页
+ * 张宇
+ **/
 public class LoginActivity extends BaseActivity {
 
     @BindView(R.id.icon_img)
