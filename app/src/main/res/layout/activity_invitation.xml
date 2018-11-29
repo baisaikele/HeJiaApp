@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.InvitationActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <include layout="@layout/activity_title" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/qb_px_1"
+            android:background="@color/white_f2f2f2" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv_tips_bangding"
+                android:layout_width="@dimen/qb_px_335"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/qb_px_25"
+                android:lineSpacingMultiplier="1.5"
+                android:text="@string/invitation_tips_bangding"
+                android:textColor="@color/black_333333"
+                android:textSize="16sp" />
+
+
+            <ImageView
+                android:id="@+id/img_invitation_wxyaoqing"
+                android:layout_width="@dimen/qb_px_297"
+                android:layout_height="@dimen/qb_px_40"
+                android:layout_below="@+id/tv_tips_bangding"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/qb_px_32"
+                android:background="@drawable/wxyaoqin" />
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/qb_px_1"
+                android:layout_below="@id/img_invitation_wxyaoqing"
+                android:layout_marginTop="@dimen/qb_px_36"
+                android:background="@color/white_f2f2f2" />
+
+            <TextView
+                android:id="@+id/tv_tips_yaqingma"
+                android:layout_width="@dimen/qb_px_335"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/view"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/qb_px_30"
+                android:lineSpacingMultiplier="1.8"
+                android:text="@string/invitation_tips_tihsixiazai"
+                android:textColor="@color/black_333333"
+                android:textSize="16sp" />
+
+
+            <TextView
+                android:id="@+id/tv_tips_baohu"
+                android:layout_width="@dimen/qb_px_335"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_tips_yaqingma"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/qb_px_10"
+                android:lineSpacingMultiplier="1.8"
+                android:text="@string/invitation_tips_baohuyaoqingma"
+                android:textColor="@color/white_AAAAAA"
+                android:textSize="14sp" />
+
+
+            <RelativeLayout
+                android:layout_width="@dimen/qb_px_335"
+                android:layout_height="@dimen/qb_px_40"
+                android:layout_below="@id/tv_tips_baohu"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/qb_px_20"
+                android:background="@drawable/shape_invitation_yqm_bj">
+
+
+                <TextView
+                    android:id="@+id/tv_invition_yaoqingma_tips"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="16dp"
+                    android:background="@color/white_f2f2f22"
+                    android:text="@string/invitation_code"
+                    android:textColor="@color/black_333333"
+                    android:textSize="16sp" />
+
+
+                <TextView
+                    android:background="@color/white_f2f2f22"
+                    android:id="@+id/tv_yqm_code"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/qb_px_16"
+                    android:layout_toRightOf="@+id/tv_invition_yaoqingma_tips"
+                    android:text="1213"
+                    android:textColor="@color/yello_FFA643"
+                    android:textSize="16sp" />
+
+
+                <TextView
+                    android:id="@+id/tv_copy_cpde"
+                    android:layout_width="@dimen/qb_px_48"
+                    android:layout_height="@dimen/qb_px_20"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/qb_px_16"
+                    android:background="@drawable/shape_invitation_yqm_copy"
+                    android:gravity="center"
+                    android:text="@string/invitation_copy"
+                    android:textColor="@color/white"
+                    android:textSize="12sp" />
+
+
+            </RelativeLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>
