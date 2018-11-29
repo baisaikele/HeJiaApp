@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
 
     <RelativeLayout
-        android:background="@drawable/dialog_join_family_shape"
-        android:layout_width="@dimen/qb_px_247"
-        android:layout_height="@dimen/qb_px_298">
+        android:layout_width="@dimen/qb_px_260"
+        android:layout_height="@dimen/qb_px_310">
 
         <TextView
             android:id="@+id/join_dialog_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/qb_px_20"
             android:text="@string/joinfamily_dialog_title"
             android:textColor="@color/yello_FFA643"
             android:textSize="16sp" />
@@ -45,16 +45,17 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/join_dialog_juese"
             android:layout_marginLeft="@dimen/qb_px_20"
-            android:layout_marginTop="@dimen/qb_px_24"
+            android:layout_marginTop="@dimen/qb_px_20"
             android:text="@string/joinfamily_dialog_muqian"
             android:textColor="@color/white_AAAAAA"
             android:textSize="14sp" />
 
         <android.support.v7.widget.RecyclerView
             android:id="@+id/joinfamily_dialog_recycview"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/qb_px_78"
+            android:layout_width="@dimen/qb_px_210"
+            android:layout_height="wrap_content"
             android:layout_below="@id/joinfamily_dialog_tishi"
+            android:layout_centerHorizontal="true"
             android:layout_marginTop="@dimen/qb_px_12">
 
         </android.support.v7.widget.RecyclerView>
@@ -86,6 +87,5 @@
             android:text="@string/joinfamily_dialog_sure"
             android:textColor="@color/white"
             android:textSize="14sp" />
-
     </RelativeLayout>
 </RelativeLayout>

@@ -1,7 +1,11 @@
 package com.keke.hejia.activity;
 
+import android.graphics.Color;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
@@ -10,6 +14,7 @@ import android.widget.VideoView;
 
 import com.keke.hejia.R;
 import com.keke.hejia.base.BaseActivity;
+import com.keke.hejia.customizeView.MyFamilyJoinDialog;
 import com.keke.hejia.util.ToastUitl;
 import com.keke.hejia.widget.TitleBuilder;
 
@@ -82,7 +87,27 @@ public class JoinFamilyActivity extends BaseActivity {
             case R.id.tv_join_family_qyq:   //去邀请
                 break;
             case R.id.tv_join_family_sure:  //成功
+                push();
                 break;
         }
+    }
+
+    public void push() {
+        final MyFamilyJoinDialog myFamilyJoinDialog = new MyFamilyJoinDialog(this);
+        myFamilyJoinDialog.show();
+        //点击取消
+        myFamilyJoinDialog.findViewById(R.id.joinfamily_dialog_quxiao).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                myFamilyJoinDialog.dismiss();
+            }
+        });
+        //点击确认
+        myFamilyJoinDialog.findViewById(R.id.joinfamily_dialog_sure).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                myFamilyJoinDialog.dismiss();
+            }
+        });
     }
 }
