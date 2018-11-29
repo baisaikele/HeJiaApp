@@ -45,4 +45,7 @@
     <string name="etit_gender">性别</string>
     <string name="etit_tishi">（不可更改）</string>
 
+    <string name="etit_edit_name">修改昵称</string>
+    <string name="etit_save_edit">保存</string>
+
 </resources>

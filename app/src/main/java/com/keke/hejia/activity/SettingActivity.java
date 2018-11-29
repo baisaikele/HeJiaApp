@@ -47,8 +47,7 @@ public class SettingActivity extends BaseActivity {
     protected void initUI() {
         //不显示右边
         new TitleBuilder(this).setTitleText(getString(R.string.setting)).setLeftIco(R.drawable.title_fanhui).setLeftIcoListening(leftReturnListener);
-        //显示右边文字
-//        new TitleBuilder(this).setTitleText("设置").setTitleRightText("你好").setRightTextListening(RightTextReturnListener).setLeftIco(R.drawable.title_fanhui).setLeftIcoListening(leftReturnListener);
+
     }
 
     //左侧返回图片监听
@@ -58,13 +57,7 @@ public class SettingActivity extends BaseActivity {
             finish();
         }
     };
-    //左侧返回文字监听
-    private View.OnClickListener RightTextReturnListener = new View.OnClickListener() {
-        @Override
-        public void onClick(View view) {
-            ToastUitl.show("wewrwe", 3);
-        }
-    };
+
 
     @OnClick({R.id.img_setting_fh, R.id.tv_wx_bangding_setting, R.id.tv_phone_bangding_setting, R.id.rl_ghysjt_setting, R.id.rl_ghxsjt_setting, R.id.rl_gy_setting, R.id.rl_lxwm_setting, R.id.bt_tuichu_setting})
     public void onViewClicked(View view) {

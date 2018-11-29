@@ -8,6 +8,7 @@ import android.widget.TextView;
 
 import com.keke.hejia.R;
 import com.keke.hejia.base.BaseActivity;
+import com.keke.hejia.base.LauncherActivity;
 import com.keke.hejia.widget.TitleBuilder;
 
 import butterknife.BindView;
@@ -93,8 +94,7 @@ public class EditActivity extends BaseActivity {
             case R.id.rl_edit_face:   //头像
                 break;
             case R.id.rl_edit_name:  //name
-                break;
-            case R.id.rl_edit_gender:  //性别
+                LauncherActivity.goToEditNameActivity(EditActivity.this);
                 break;
             case R.id.rl_edit_data:   //出生日期
                 break;
