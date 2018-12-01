@@ -195,6 +195,10 @@ public class LoadingActivity extends BaseActivity {
     }
 
 
+    /**
+     * 代码提示黄色报警   增加注解
+     * @SuppressLint("CheckResult")
+     * **/
     @SuppressLint("CheckResult")
     private void requestPermissions() {
         RxPermissions rxPermission = new RxPermissions(LoadingActivity.this);

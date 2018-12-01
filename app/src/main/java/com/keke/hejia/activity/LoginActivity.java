@@ -1,5 +1,6 @@
 package com.keke.hejia.activity;
 
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.CountDownTimer;
@@ -11,8 +12,11 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.keke.hejia.R;
+import com.keke.hejia.api.PublicApi;
 import com.keke.hejia.base.BaseActivity;
 import com.keke.hejia.base.LauncherActivity;
+import com.keke.hejia.bean.LoginBean;
+import com.keke.hejia.util.LogUtils;
 import com.keke.hejia.util.ToastUitl;
 
 import butterknife.BindView;
@@ -82,6 +86,23 @@ public class LoginActivity extends BaseActivity {
                     ToastUitl.show("请输入信息", 2);
                     return;
                 }
+                PublicApi.getLogin("", "", "", "zy", "", new PublicApi.ResponseListener() {
+                    @Override
+                    public void success(Object o) {
+                        LogUtils.loge("成功");
+                        LoginBean loginBean = (LoginBean) o;
+                        if (loginBean == null) {
+                            return;
+                        }
+                    }
+
+                    @Override
+                    public void error(String s) {
+                        LogUtils.loge("失败");
+                    }
+                });
+
+
                 LauncherActivity.goToPerfectActivity(this);
                 break;
             case R.id.img_wx:

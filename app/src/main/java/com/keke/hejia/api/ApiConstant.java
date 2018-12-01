@@ -12,4 +12,9 @@ public class ApiConstant {
      */
     public static final String APP_INITIAL = "app/initial";
 
+
+    /**
+     * 登录接口
+     */
+    public static final String USER_LOGIN = "user/login";
 }

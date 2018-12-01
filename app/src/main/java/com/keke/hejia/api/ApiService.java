@@ -2,6 +2,7 @@ package com.keke.hejia.api;
 
 import com.keke.hejia.api.bean.HJBaseEntity;
 import com.keke.hejia.bean.ApiInitBean;
+import com.keke.hejia.bean.LoginBean;
 
 import java.util.List;
 import java.util.Map;
@@ -33,4 +34,8 @@ public interface ApiService {
     //初始化
     @GET
     Observable<HJBaseEntity<ApiInitBean>> getInitApp(@Url String url, @QueryMap Map<String, String> map);
+
+    //登录接口
+    @GET
+    Observable<HJBaseEntity<LoginBean>> getLogin(@Url String url, @QueryMap Map<String, String> map);
 }
