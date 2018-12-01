@@ -14,7 +14,7 @@ import android.util.Log;
 import android.util.SparseArray;
 import android.widget.Toast;
 
-import com.keke.hejia.HeJiaApp;
+import com.keke.hejia.base.HeJiaApp;
 import com.keke.hejia.util.LogUtils;
 
 import java.io.File;

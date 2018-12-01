@@ -1,4 +1,4 @@
-package com.keke.hejia;
+package com.keke.hejia.base;
 
 import android.app.ActivityManager;
 import android.app.Application;
@@ -16,7 +16,7 @@ public class HeJiaApp extends Application {
     //    网络请求 api 用来   清除 缓存和cooke
     public Api api;
     //    是否登录
-    public static boolean isLogin=false;
+    public static boolean isLogin = false;
     //    服务器时间戳
     private long timestampCorrection;
 
@@ -25,14 +25,11 @@ public class HeJiaApp extends Application {
     public void onCreate() {
         super.onCreate();
         if (isMainProcess()) {
-            instance=this;
+            instance = this;
             MultiDex.install(this);
         }
 
     }
-
-
-
 
 
     public boolean isMainProcess() {
@@ -47,6 +44,7 @@ public class HeJiaApp extends Application {
         }
         return false;
     }
+
     public long getTimestampCorrection() {
         return timestampCorrection;
     }

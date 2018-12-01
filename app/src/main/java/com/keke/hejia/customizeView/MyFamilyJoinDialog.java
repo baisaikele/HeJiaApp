@@ -4,10 +4,8 @@ import android.app.Dialog;
 import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Rect;
-import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
-import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.text.Html;
@@ -15,7 +13,7 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.keke.hejia.R;
-import com.keke.hejia.RecycBeanDemo;
+import com.keke.hejia.bean.RecycBeanDemo;
 import com.keke.hejia.adapter.RecycViewAdapter;
 
 import java.util.ArrayList;
