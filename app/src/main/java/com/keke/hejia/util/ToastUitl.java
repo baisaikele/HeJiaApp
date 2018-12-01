@@ -3,7 +3,7 @@ package com.keke.hejia.util;
 import android.content.Context;
 import android.widget.Toast;
 
-import com.keke.hejia.HeJiaApp;
+import com.keke.hejia.base.HeJiaApp;
 
 public class ToastUitl {
 

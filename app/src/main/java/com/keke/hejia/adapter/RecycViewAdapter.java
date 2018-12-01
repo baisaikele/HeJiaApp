@@ -9,7 +9,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.keke.hejia.R;
-import com.keke.hejia.RecycBeanDemo;
+import com.keke.hejia.bean.RecycBeanDemo;
 
 import java.util.List;
 

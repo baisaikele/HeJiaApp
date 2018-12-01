@@ -1,7 +1,12 @@
 package com.keke.hejia.activity;
 
 import android.Manifest;
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
+import android.os.UserManager;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.util.Log;
@@ -16,10 +21,16 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.google.gson.Gson;
+import com.keke.hejia.MainActivity;
 import com.keke.hejia.R;
+import com.keke.hejia.api.InitInfoManager;
+import com.keke.hejia.api.PublicApi;
 import com.keke.hejia.base.BaseActivity;
+import com.keke.hejia.base.HeJiaApp;
 import com.keke.hejia.base.LauncherActivity;
+import com.keke.hejia.bean.ApiInitBean;
 import com.keke.hejia.util.DepthPageTransformer;
+import com.keke.hejia.util.SharedPreferenceUtil;
 import com.keke.hejia.util.ToastUitl;
 import com.tbruyelle.rxpermissions2.Permission;
 import com.tbruyelle.rxpermissions2.RxPermissions;
@@ -42,8 +53,6 @@ public class LoadingActivity extends BaseActivity {
     ImageView lanIv;
     @BindView(R.id.btn)
     Button btn;
-    @BindView(R.id.tv_djs)
-    TextView tvDjs;
 
     //图片资源文件
     private int[] images = {R.drawable.loading_one, R.drawable.loading_two,
@@ -53,6 +62,30 @@ public class LoadingActivity extends BaseActivity {
     // 放4个小灰点的线性布局
     //小点之间的距离
     private int pointWidth;
+    public int last_time = 3;
+    Handler handler = new Handler(new Handler.Callback() {
+        @Override
+        public boolean handleMessage(Message message) {
+            handler.removeCallbacksAndMessages(null);
+            switch (message.what) {
+                case 1:
+                    handler.removeMessages(2);
+                    Intent intent = new Intent(LoadingActivity.this, LoginActivity.class);
+                    startActivity(intent);
+                    finish();
+                    break;
+                case 2:
+                    last_time--;
+                    if (last_time == 0) {
+                        handler.sendEmptyMessageDelayed(1, 1000);
+                    } else {
+                        handler.sendEmptyMessageDelayed(2, 1000);
+                    }
+                    break;
+            }
+            return false;
+        }
+    });
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -145,6 +178,19 @@ public class LoadingActivity extends BaseActivity {
     @Override
     protected void initUI() {
         requestPermissions();
+        initBanner();
+    }
+
+    //判断是否是第一次进入
+    private void initBanner() {
+        if (SharedPreferenceUtil.getFirst(this, "first", "").equals("")) {
+            vp.setVisibility(View.VISIBLE);
+            linearLayout.setVisibility(View.VISIBLE);
+            lanIv.setVisibility(View.VISIBLE);
+            SharedPreferenceUtil.putFirst(this, true, "first", "123");
+        } else {
+            handler.sendEmptyMessage(2);
+        }
     }
 
 
@@ -159,6 +205,18 @@ public class LoadingActivity extends BaseActivity {
                 .subscribe(new Consumer<Permission>() {
                     @Override
                     public void accept(Permission permission) throws Exception {
+                        PublicApi.getIntAPP(new PublicApi.ResponseListener() {
+                            @Override
+                            public void success(Object o) {
+                                ApiInitBean apiIntBean = (ApiInitBean) o;
+                                InitInfoManager.getInstance().init(apiIntBean);
+                            }
+
+                            @Override
+                            public void error(String s) {
+
+                            }
+                        });
 
 
                         if (permission.granted) {
@@ -177,13 +235,10 @@ public class LoadingActivity extends BaseActivity {
                 });
     }
 
-    @OnClick({R.id.btn, R.id.tv_djs})
+    @OnClick({R.id.btn})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.btn:
-                LauncherActivity.goToLoginActivity(this);
-                break;
-            case R.id.tv_djs:
                 LauncherActivity.goToLoginActivity(this);
                 break;
         }
@@ -224,4 +279,14 @@ public class LoadingActivity extends BaseActivity {
             container.removeView((View) object);
         }
     }
+
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        if (handler != null) {
+            handler.removeCallbacksAndMessages(null);
+        }
+    }
+
 }

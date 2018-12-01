@@ -1,4 +1,4 @@
-package com.keke.hejia;
+package com.keke.hejia.bean;
 
 public class RecycBeanDemo {
     public RecycBeanDemo(String name, int iconid, String role) {

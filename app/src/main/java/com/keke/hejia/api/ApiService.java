@@ -1,6 +1,7 @@
 package com.keke.hejia.api;
 
 import com.keke.hejia.api.bean.HJBaseEntity;
+import com.keke.hejia.bean.ApiInitBean;
 
 import java.util.List;
 import java.util.Map;
@@ -21,13 +22,15 @@ import retrofit2.http.Url;
  */
 
 public interface ApiService {
-    
-    
-    
+
+
     @GET()
     Call<ResponseBody> getdata(@Url String url, @QueryMap Map<String, String> map);
 
     @GET
     Observable<HJBaseEntity<String>> getStatus(@Url String url, @QueryMap Map<String, String> map);
 
+    //初始化
+    @GET
+    Observable<HJBaseEntity<ApiInitBean>> getInitApp(@Url String url, @QueryMap Map<String, String> map);
 }
