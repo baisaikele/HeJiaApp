@@ -2,12 +2,12 @@
 
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
-        <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/white</item>
         <item name="colorPrimaryDark">@color/white</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:background">@color/white</item>
     </style>
-
 
     <style name="loginTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="android:windowBackground">@drawable/login_bj</item>
@@ -30,6 +30,21 @@
         <item name="android:textSize">17sp</item>
         <item name="android:textColor">@color/yello_FFA643</item>
         <item name="android:layout_gravity">center</item>
+    </style>
+
+    <style name="CustomDialog" parent="android:style/Theme.Dialog">
+        <!-- 背景颜色及和透明程度 -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!-- 是否去除标题-->
+        <item name="android:windowNoTitle">true</item>
+        <!-- 是否去除边框 -->
+        <item name="android:windowFrame">@null</item>
+        <!-- 是否浮现在activity之上-->
+        <item name="android:windowIsFloating">true</item>
+        <!--设置点击外面 取消-->
+        <item name="android:windowCloseOnTouchOutside">true</item>
+        <!-- 是否模糊-->
+        <item name="android:backgroundDimEnabled">true</item>
     </style>
 
 </resources>

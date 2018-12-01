@@ -134,6 +134,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/bt_sign_in"
         android:layout_centerHorizontal="true"
+        android:background="@null"
         android:layout_marginTop="@dimen/qb_px_73">
 
         <View
@@ -162,6 +163,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/rl_wx_sign"
         android:layout_centerHorizontal="true"
+        android:background="@null"
         android:layout_marginTop="@dimen/qb_px_51"
         android:text="@string/login_guize"
         android:textColor="@color/white"

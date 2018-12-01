@@ -27,21 +27,41 @@
         <activity
             android:name=".activity.LoadingActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/loginTheme" />
-        <activity
-            android:name=".activity.LoginActivity"
-            android:screenOrientation="portrait">
-
-        </activity>
-        <activity
-            android:name=".activity.PerfectActivity"
-            android:screenOrientation="portrait">
+            android:theme="@style/loginTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".activity.LoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MainActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.PerfectActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.SettingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ChangeHomeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.EditActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.EditNameActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.InvitationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.JoinFamilyActivity"
+            android:screenOrientation="portrait"></activity>
     </application>
 
 </manifest>

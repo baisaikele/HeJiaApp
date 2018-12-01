@@ -6,5 +6,57 @@
     android:layout_height="match_parent"
     tools:context=".activity.LoadingActivity">
 
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp">
+        <!-- 放置图片底部小点的位置这里之所以不写在这里，是为了代码的灵活性，通过Java代码来根据图
+        片的多少动态加入 -->
+        <LinearLayout
+            android:id="@+id/ll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"></LinearLayout>
+
+        <!-- 滑倒当前页显示的蓝色小点 -->
+        <ImageView
+            android:id="@+id/lan_Iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/yuandian" />
+
+    </RelativeLayout>
+
+    <!-- 最后一页要显示的按钮，开始默认是不显示的 -->
+    <Button
+        android:id="@+id/btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="50dp"
+        android:text="开始体验"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tv_djs"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/qb_px_33"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/qb_px_12"
+        android:layout_marginTop="@dimen/qb_px_46"
+        android:background="@drawable/shape_yd_text"
+        android:gravity="center"
+        android:paddingLeft="@dimen/qb_px_20"
+        android:paddingRight="@dimen/qb_px_20"
+        android:text="@string/joinfamily_title_tiaoguo"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp" />
 </RelativeLayout>

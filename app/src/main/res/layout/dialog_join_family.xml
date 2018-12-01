@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="@dimen/qb_px_260"
+        android:layout_height="@dimen/qb_px_310">
+
+        <TextView
+            android:id="@+id/join_dialog_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/qb_px_20"
+            android:text="@string/joinfamily_dialog_title"
+            android:textColor="@color/yello_FFA643"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/join_dialog_yaqingni"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/join_dialog_title"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/qb_px_12"
+            android:text="@string/joinfamily_dialog_yd"
+            android:textColor="@color/black_4A4A4A"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/join_dialog_juese"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/join_dialog_yaqingni"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/qb_px_12"
+            android:text="@string/joinfamily_dialog_juese"
+            android:textColor="@color/black_4A4A4A"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/joinfamily_dialog_tishi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/join_dialog_juese"
+            android:layout_marginLeft="@dimen/qb_px_20"
+            android:layout_marginTop="@dimen/qb_px_20"
+            android:text="@string/joinfamily_dialog_muqian"
+            android:textColor="@color/white_AAAAAA"
+            android:textSize="14sp" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/joinfamily_dialog_recycview"
+            android:layout_width="@dimen/qb_px_210"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/joinfamily_dialog_tishi"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/qb_px_12">
+
+        </android.support.v7.widget.RecyclerView>
+
+        <TextView
+            android:id="@+id/joinfamily_dialog_quxiao"
+            android:layout_width="@dimen/qb_px_64"
+            android:layout_height="@dimen/qb_px_34"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="@dimen/qb_px_20"
+            android:layout_marginLeft="@dimen/qb_px_39"
+            android:background="@drawable/setting_ybd_shape_false"
+            android:gravity="center"
+            android:text="@string/joinfamily_dialog_quit"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/joinfamily_dialog_sure"
+            android:layout_width="@dimen/qb_px_64"
+            android:layout_height="@dimen/qb_px_34"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="@dimen/qb_px_20"
+            android:layout_marginRight="@dimen/qb_px_40"
+            android:background="@drawable/shape_family"
+            android:gravity="center"
+            android:text="@string/joinfamily_dialog_sure"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+    </RelativeLayout>
+</RelativeLayout>

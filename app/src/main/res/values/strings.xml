@@ -1,6 +1,7 @@
 <resources>
     <string name="page">com.keke.hejia</string>
-    <string name="app_name">hejia_wuming</string>
+    <string name="app_name">壳壳</string>
+    <string name="permission_erro">部分功能可能无法使用</string>
 
     //login
     <string name="login_hin_phone">请输入11位手机号码</string>
@@ -10,7 +11,7 @@
     <string name="login_guize">登录即代表您同意《xx用户协议》</string>
     <string name="title_activity_wsxx">完善信息</string>
 
-
+    //perfect
     <string name="perfect_show_xingbie">选择性别</string>
     <string name="perfect_show_tishi_name">你的昵称</string>
     <string name="perfect_show_birthdy">出生日期</string>
@@ -19,5 +20,61 @@
     <string name="perfect_data">2000-11-11</string>
     <string name="perfect_man">男</string>
     <string name="perfect_wuman">女</string>
+    //setting
+    <string name="setting">设置</string>
+    <string name="setting_weixin">微信</string>
+    <string name="setting_phone">手机号</string>
+    <string name="setting_tuichu_yuan">更换/退出原生家庭</string>
+    <string name="setting_tuichu_xin">更换/退出新生家庭</string>
+    <string name="setting_guanyuwomen">关于我们</string>
+    <string name="setting_lianxiwomen">联系我们</string>
+    <string name="setting_tuichudl">退出登录</string>
+    <string name="setting_yibangding">已绑定</string>
+    <string name="setting_weibangding">未绑定</string>
+    //changeHome
+    <string name="changeHome_sure">确定</string>
+    <string name="changeHome_login_out">退出</string>
+    <string name="changeHome_genghuan_ys">更换原生家庭</string>
+    <string name="changeHome_tuichuyansheng">退出原生家庭</string>
+    <string name="changeHome_shuru_phone">输入家庭号码</string>
+    <string name="changeHome_title">更换/退出家庭</string>
+
+    //etit And editName
+    <string name="etit_title">编辑资料</string>
+    <string name="etit_face">头像</string>
+    <string name="etit_name">昵称</string>
+    <string name="etit_gender">性别</string>
+    <string name="etit_tishi">（不可更改）</string>
+    <string name="etit_edit_name">修改昵称</string>
+    <string name="etit_save_edit">保存</string>
+
+    //Invitation
+    <string name="invitation_title">邀请</string>
+    <string name="invitation_tips_bangding">请用户加入父亲的角色，用户注册成功，下载应用登录应用后，会提示用户绑定该角色。</string>
+    <string name="invitation_tips_tihsixiazai">如用户已下载该应用，则输入角色邀请码后加入家庭。</string>
+    <string name="invitation_tips_baohuyaoqingma">请保护好您的邀请码，不要泄漏给其他人。</string>
+    <string name="invitation_code">邀请码：</string>
+    <string name="invitation_copy">复制</string>
+
+
+    <string name="joinfamily_title">加入家庭</string>
+    <string name="joinfamily_title_tiaoguo">跳过</string>
+    <string name="joinfamily_yqjr">邀请家人加入家庭</string>
+    <string name="joinfamily_qyq">去邀请</string>
+    <string name="joinfamily_jrys">加入我的原生家庭</string>
+    <string name="joinfamily_jrxs">加入我的新生家庭</string>
+    <string name="joinfamily_srys">输入原生家庭邀请码</string>
+    <string name="joinfamily_zenmwan">怎么玩？</string>
+    <string name="joinfamily_cg">恭喜你，你已加入原生家庭</string>
+    <string name="joinfamily_tg">跳过后，如希望加入家庭请去我的-设置里面操作</string>
+
+
+    <string name="joinfamily_dialog_title">是否加入该家庭？</string>
+    <string name="joinfamily_dialog_yd">邀请你加入他的家庭</string>
+    <string name="joinfamily_dialog_juese">你在家庭中的角色是</string>
+    <string name="joinfamily_dialog_muqian">目前加入的人有</string>
+    <string name="joinfamily_dialog_quit">取消</string>
+    <string name="joinfamily_dialog_sure">是的</string>
+
 
 </resources>

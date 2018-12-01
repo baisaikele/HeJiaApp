@@ -12,6 +12,8 @@
     <color name="black_FFFFFFFF">#FFFFFFFF</color>
     <color name="black_F5F5F5">#F5F5F5</color>
     <color name="black_525252">#525252</color>
+    <color name="black_c9c9c9">#C9C9C9</color>
+    <color name="transparent">#00000000</color>
     //login
     <color name="black_50FFFFFF">#50000000</color>
     <color name="write_C7C7CC">#C7C7CC</color>
@@ -21,8 +23,9 @@
     <color name="yello_FFA643">#FFA643</color>
     <color name="white_f2f2f2">#fff2f2f2</color>
     <color name="white_BBBBBB">#BBBBBB</color>
+    <color name="white_AAAAAA">#AAAAAA</color>
 
-
-
+    <color name="white_F2F2F2">#F2F2F2</color>
+    <color name="black_4A4A4A">#4A4A4A</color>
 
 </resources>

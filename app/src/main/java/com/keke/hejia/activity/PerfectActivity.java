@@ -18,7 +18,9 @@ import android.widget.TextView;
 
 import com.keke.hejia.R;
 import com.keke.hejia.base.BaseActivity;
+import com.keke.hejia.base.LauncherActivity;
 import com.keke.hejia.util.ToastUitl;
+import com.keke.hejia.widget.TitleBuilder;
 
 import java.util.Calendar;
 
@@ -26,6 +28,11 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
+/**
+ * 2019/11/29
+ * 完善资料
+ * 张宇
+ **/
 public class PerfectActivity extends BaseActivity {
 
 
@@ -88,6 +95,8 @@ public class PerfectActivity extends BaseActivity {
                 }
             }
         });
+        //显示title文字
+        new TitleBuilder(this).setTitleText(getString(R.string.title_activity_wsxx));
     }
 
 
@@ -105,9 +114,10 @@ public class PerfectActivity extends BaseActivity {
                 new DatePickerDialog(PerfectActivity.this, onDateSetListener, mYear, mMonth, mDay).show();
                 break;
             case R.id.bt_sign_in_perfect:
-                if ("".equals(editNamePerfect.getText().toString()))
+                if ("".equals(editNamePerfect.getText().toString())) {
                     ToastUitl.show("昵称为空", 2);
-
+                }
+                LauncherActivity.goToJoinMainActivity(this);
                 break;
         }
     }
