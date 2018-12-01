@@ -5,8 +5,11 @@ import android.content.Context;
 import android.content.Intent;
 
 
+import com.keke.hejia.MainActivity;
 import com.keke.hejia.activity.ChangeHomeActivity;
 import com.keke.hejia.activity.EditNameActivity;
+import com.keke.hejia.activity.JoinFamilyActivity;
+import com.keke.hejia.activity.LoginActivity;
 
 
 /**
@@ -36,6 +39,33 @@ public class LauncherActivity {
 
     public static void goToEditNameActivity(Context context) {
         Intent intent = new Intent(context, EditNameActivity.class);
+        context.startActivity(intent);
+    }
+
+    /**
+     * 去往登录页
+     *
+     * @param context
+     */
+
+    public static void goToLoginActivity(Context context) {
+        Intent intent = new Intent(context, LoginActivity.class);
+        context.startActivity(intent);
+    }
+
+    /**
+     * 去往首页
+     *
+     * @param context
+     */
+
+    public static void goToMainActivity(Context context) {
+        Intent intent = new Intent(context, MainActivity.class);
+        context.startActivity(intent);
+    }
+
+    public static void goToJoinMainActivity(Context context) {
+        Intent intent = new Intent(context, JoinFamilyActivity.class);
         context.startActivity(intent);
     }
 

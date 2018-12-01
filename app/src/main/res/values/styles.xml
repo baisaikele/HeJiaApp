@@ -45,7 +45,6 @@
         <item name="android:windowCloseOnTouchOutside">true</item>
         <!-- 是否模糊-->
         <item name="android:backgroundDimEnabled">true</item>
-        <item name="android:background">@drawable/dialog_join_family_shape</item>
     </style>
 
 </resources>

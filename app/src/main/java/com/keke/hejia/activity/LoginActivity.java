@@ -12,11 +12,13 @@ import android.widget.TextView;
 
 import com.keke.hejia.R;
 import com.keke.hejia.base.BaseActivity;
+import com.keke.hejia.base.LauncherActivity;
 import com.keke.hejia.util.ToastUitl;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+
 /**
  * 2019/11/29
  * 登录页
@@ -80,7 +82,7 @@ public class LoginActivity extends BaseActivity {
                     ToastUitl.show("请输入信息", 2);
                     return;
                 }
-
+                LauncherActivity.goToJoinMainActivity(this);
                 break;
             case R.id.img_wx:
                 ToastUitl.show("目前不支持微信！！", 2);
@@ -125,10 +127,6 @@ public class LoginActivity extends BaseActivity {
         timer.start();
     }
 
-    @Override
-    public void onBackPressed() {
-
-    }
 
     private CountDownTimer timer = new CountDownTimer(60000, 1000) {
 
