@@ -12,6 +12,7 @@ import com.keke.hejia.activity.InvitationActivity;
 import com.keke.hejia.activity.JoinFamilyActivity;
 import com.keke.hejia.activity.LoginActivity;
 import com.keke.hejia.activity.PerfectActivity;
+import com.keke.hejia.activity.UpdataActivity;
 
 
 /**
@@ -96,5 +97,15 @@ public class LauncherActivity {
         Intent intent = new Intent(context,InvitationActivity.class);
         context.startActivity(intent);
     }
-
+    /**
+     * 更新apk
+     */
+    public static void goToUpAppActivity(Context context, String title, String cont, String url, int type) {
+        Intent intent = new Intent(context, UpdataActivity.class);
+        intent.putExtra(UpdataActivity.TYPE, type);
+        intent.putExtra(UpdataActivity.KEY_UPDATE_URL, url);
+        intent.putExtra(UpdataActivity.KEY_UPDATE_TITLE, title);
+        intent.putExtra(UpdataActivity.KEY_IGNORE_DATE, cont);
+        context.startActivity(intent);
+    }
 }
