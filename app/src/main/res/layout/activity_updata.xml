@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent_7777"
+    tools:context=".activity.UpdataActivity">
+
+    <LinearLayout
+        android:id="@+id/ll"
+        android:layout_width="@dimen/qb_px_302"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/hui_baijing"
+        android:orientation="vertical">
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+
+            <ImageView
+                android:id="@+id/iv_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/loading_one"
+
+                />
+
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/qb_px_150"
+                android:layout_marginTop="@dimen/qb_px_111" />
+        </RelativeLayout>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/qb_px_33"
+            android:layout_marginTop="@dimen/qb_px_33"
+            android:text="@string/newneirong"
+            android:textColor="#FF444444"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/tv_con"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/qb_px_33"
+            android:layout_marginRight="@dimen/qb_px_33"
+            android:layout_marginTop="@dimen/qb_px_17"
+            android:text="服务器计划出现故障，将10:00-12：00维护，如果过预定时间没有完成维护内容，请耐心等待，给您造成的不便，敬请谅解！"
+            android:textColor="#FF333333"
+            android:textSize="14sp" />
+
+        <ProgressBar
+            android:id="@+id/check_version_progress"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="102.24px"
+            android:foregroundGravity="center"
+            android:max="100"
+            android:paddingBottom="10dp"
+            android:paddingLeft="28dp"
+            android:paddingRight="28dp"
+            android:paddingTop="10dp"
+            android:progressDrawable="@drawable/weixin"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_ok"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/qb_px_24"
+            android:layout_marginTop="@dimen/qb_px_50"
+            android:background="@drawable/upgrade_btn" />
+
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/iv_fins"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30px"
+        android:src="@drawable/wuxiao"
+        android:visibility="gone" />
+</RelativeLayout>

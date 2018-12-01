@@ -76,5 +76,8 @@
     <string name="joinfamily_dialog_quit">取消</string>
     <string name="joinfamily_dialog_sure">是的</string>
 
+    <!--升级-->
+    <string name="newneirong">更新内容：</string>
+
 
 </resources>

@@ -62,6 +62,13 @@
         <activity
             android:name=".activity.JoinFamilyActivity"
             android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".activity.UpdataActivity"
+            android:theme="@style/ActivityTransparent" />
+
+        <service
+            android:name=".updata.UpdateService"
+            android:enabled="true" />
     </application>
 
 </manifest>

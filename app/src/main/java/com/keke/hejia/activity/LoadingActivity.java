@@ -1,6 +1,7 @@
 package com.keke.hejia.activity;
 
 import android.Manifest;
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -20,16 +21,15 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.google.gson.Gson;
-import com.keke.hejia.MainActivity;
 import com.keke.hejia.R;
 import com.keke.hejia.api.InitInfoManager;
 import com.keke.hejia.api.PublicApi;
+import com.keke.hejia.api.kkWzConstants;
 import com.keke.hejia.base.BaseActivity;
-import com.keke.hejia.base.HeJiaApp;
 import com.keke.hejia.base.LauncherActivity;
 import com.keke.hejia.bean.ApiInitBean;
 import com.keke.hejia.util.DepthPageTransformer;
+import com.keke.hejia.util.Preferences;
 import com.keke.hejia.util.SharedPreferenceUtil;
 import com.keke.hejia.util.ToastUitl;
 import com.tbruyelle.rxpermissions2.Permission;
@@ -37,7 +37,6 @@ import com.tbruyelle.rxpermissions2.RxPermissions;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Locale;
 
 import butterknife.BindView;
 import butterknife.OnClick;
@@ -53,6 +52,7 @@ public class LoadingActivity extends BaseActivity {
     ImageView lanIv;
     @BindView(R.id.btn)
     Button btn;
+    Context context;
 
     //图片资源文件
     private int[] images = {R.drawable.loading_one, R.drawable.loading_two,
@@ -90,6 +90,7 @@ public class LoadingActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        context = this;
     }
 
     @Override
@@ -194,6 +195,7 @@ public class LoadingActivity extends BaseActivity {
     }
 
 
+    @SuppressLint("CheckResult")
     private void requestPermissions() {
         RxPermissions rxPermission = new RxPermissions(LoadingActivity.this);
         rxPermission
@@ -209,15 +211,23 @@ public class LoadingActivity extends BaseActivity {
                             @Override
                             public void success(Object o) {
                                 ApiInitBean apiIntBean = (ApiInitBean) o;
-                                InitInfoManager.getInstance().init(apiIntBean);
+//                                InitInfoManager.getInstance().init(apiIntBean);
+//                                ApiInitBean.VersionInfoBean updata = InitInfoManager.getInstance().getApiIntBean().getVersion_info();
+                                if (apiIntBean != null && apiIntBean.getVersion_info().getUpgrade_type() > 0) {
+                                    LauncherActivity.
+                                            goToUpAppActivity(context, apiIntBean.getVersion_info().getVersion(), apiIntBean.getVersion_info().getDesc(), apiIntBean.getVersion_info().getDownload_url(), apiIntBean.getVersion_info().getUpgrade_type());
+                                } else {
+                                    if (InitInfoManager.getInstance().getApiIntBean() != null && InitInfoManager.getInstance().getApiIntBean().getReview_type() != 1) { // 审核
+                                    } else {
+                                        showRedpacket();
+                                    }
+                                }
                             }
 
                             @Override
                             public void error(String s) {
-
                             }
                         });
-
 
                         if (permission.granted) {
 
@@ -241,6 +251,15 @@ public class LoadingActivity extends BaseActivity {
             case R.id.btn:
                 LauncherActivity.goToLoginActivity(this);
                 break;
+        }
+    }
+
+    //审核
+    private void showRedpacket() {
+        int i = Preferences.getInstance().getInt(kkWzConstants.SP_LOGINNUM, 0);
+        if (i < 10) {
+            i++;
+            Preferences.getInstance().putInt(kkWzConstants.SP_LOGINNUM, i);
         }
     }
 
