@@ -8,8 +8,10 @@ import android.content.Intent;
 import com.keke.hejia.MainActivity;
 import com.keke.hejia.activity.ChangeHomeActivity;
 import com.keke.hejia.activity.EditNameActivity;
+import com.keke.hejia.activity.InvitationActivity;
 import com.keke.hejia.activity.JoinFamilyActivity;
 import com.keke.hejia.activity.LoginActivity;
+import com.keke.hejia.activity.PerfectActivity;
 
 
 /**
@@ -64,8 +66,34 @@ public class LauncherActivity {
         context.startActivity(intent);
     }
 
+    /**
+     * 加入家庭
+     *
+     * @param context
+     */
     public static void goToJoinMainActivity(Context context) {
         Intent intent = new Intent(context, JoinFamilyActivity.class);
+        context.startActivity(intent);
+    }
+
+
+    /**
+     * 完善资料
+     *
+     * @param context
+     */
+    public static void goToPerfectActivity(Context context) {
+        Intent intent = new Intent(context, PerfectActivity.class);
+        context.startActivity(intent);
+    }
+
+    /**
+     * 邀请
+     *
+     * @param context
+     */
+    public static void goToInvitationActivity(Context context) {
+        Intent intent = new Intent(context,InvitationActivity.class);
         context.startActivity(intent);
     }
 

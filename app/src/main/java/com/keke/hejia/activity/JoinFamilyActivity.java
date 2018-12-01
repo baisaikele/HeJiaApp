@@ -1,5 +1,6 @@
 package com.keke.hejia.activity;
 
+import android.content.Context;
 import android.graphics.Color;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.ColorDrawable;
@@ -14,6 +15,7 @@ import android.widget.VideoView;
 
 import com.keke.hejia.R;
 import com.keke.hejia.base.BaseActivity;
+import com.keke.hejia.base.LauncherActivity;
 import com.keke.hejia.customizeView.MyFamilyJoinDialog;
 import com.keke.hejia.util.ToastUitl;
 import com.keke.hejia.widget.TitleBuilder;
@@ -21,6 +23,7 @@ import com.keke.hejia.widget.TitleBuilder;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+
 /**
  * 2019/11/29
  * 加入家庭
@@ -80,7 +83,7 @@ public class JoinFamilyActivity extends BaseActivity {
     private View.OnClickListener RightTextReturnListener = new View.OnClickListener() {
         @Override
         public void onClick(View view) {
-            ToastUitl.show("wewrwe", 3);
+            LauncherActivity.goToMainActivity(view.getContext());
         }
     };
 
@@ -89,6 +92,7 @@ public class JoinFamilyActivity extends BaseActivity {
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.tv_join_family_qyq:   //去邀请
+                LauncherActivity.goToInvitationActivity(this);
                 break;
             case R.id.tv_join_family_sure:  //成功
                 push();

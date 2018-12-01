@@ -82,7 +82,7 @@ public class LoginActivity extends BaseActivity {
                     ToastUitl.show("请输入信息", 2);
                     return;
                 }
-                LauncherActivity.goToJoinMainActivity(this);
+                LauncherActivity.goToPerfectActivity(this);
                 break;
             case R.id.img_wx:
                 ToastUitl.show("目前不支持微信！！", 2);

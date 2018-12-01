@@ -1,8 +1,10 @@
 package com.keke.hejia.activity;
 
+import android.Manifest;
 import android.os.Bundle;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,10 +15,14 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.google.gson.Gson;
 import com.keke.hejia.R;
 import com.keke.hejia.base.BaseActivity;
 import com.keke.hejia.base.LauncherActivity;
 import com.keke.hejia.util.DepthPageTransformer;
+import com.keke.hejia.util.ToastUitl;
+import com.tbruyelle.rxpermissions2.Permission;
+import com.tbruyelle.rxpermissions2.RxPermissions;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -24,6 +30,7 @@ import java.util.Locale;
 
 import butterknife.BindView;
 import butterknife.OnClick;
+import io.reactivex.functions.Consumer;
 
 public class LoadingActivity extends BaseActivity {
 
@@ -54,20 +61,6 @@ public class LoadingActivity extends BaseActivity {
 
     @Override
     public void initData() {
-    }
-
-    @Override
-    public void getIntentData() {
-
-    }
-
-    @Override
-    public int getLayoutResId() {
-        return R.layout.activity_loading;
-    }
-
-    @Override
-    protected void initUI() {
         iamgeList = new ArrayList<ImageView>();
         //初始化图片和小点，图片的个数和小点的个数要始终一致
         for (int i = 0; i < images.length; i++) {
@@ -137,6 +130,51 @@ public class LoadingActivity extends BaseActivity {
         });
         //设置滑动特效（可加可不加）
         vp.setPageTransformer(true, new DepthPageTransformer());
+    }
+
+    @Override
+    public void getIntentData() {
+
+    }
+
+    @Override
+    public int getLayoutResId() {
+        return R.layout.activity_loading;
+    }
+
+    @Override
+    protected void initUI() {
+        requestPermissions();
+    }
+
+
+    private void requestPermissions() {
+        RxPermissions rxPermission = new RxPermissions(LoadingActivity.this);
+        rxPermission
+                .requestEach(
+                        Manifest.permission.READ_PHONE_STATE,
+                        Manifest.permission.ACCESS_FINE_LOCATION,
+                        Manifest.permission.WRITE_EXTERNAL_STORAGE
+                )
+                .subscribe(new Consumer<Permission>() {
+                    @Override
+                    public void accept(Permission permission) throws Exception {
+
+
+                        if (permission.granted) {
+
+                        } else if (permission.shouldShowRequestPermissionRationale) {
+                            // 用户拒绝了该权限，没有选中『不再询问』（Never ask again）,那么下次再次启动时，还会提示请求权限的对话框
+                            Log.d("TAG", permission.name + " is denied. More info should be provided.");
+                            String string = getString(R.string.permission_erro);
+                            ToastUitl.showShort(string);
+                        } else {
+                            // 用户拒绝了该权限，并且选中『不再询问』
+                            Log.d("TAG", permission.name + " is denied.");
+                        }
+
+                    }
+                });
     }
 
     @OnClick({R.id.btn, R.id.tv_djs})
