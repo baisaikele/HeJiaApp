@@ -15,6 +15,14 @@
         <item name="windowNoTitle">true</item>
     </style>
 
+
+    <!-- Base application theme. -->
+    <style name="main_Theme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/yello_FF9900</item>   //
+        <item name="colorPrimaryDark">@color/yello_FF9900</item>  //titbar
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:background">@color/white</item>      //背景
+    </style>
     <style name="AppTheme.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
@@ -69,6 +77,25 @@
     <style name="BottomDialog.AnimationStyle" parent="android:Animation">
         <item name="android:windowEnterAnimation">@anim/slide_in_from_bottom</item>
         <item name="android:windowExitAnimation">@anim/slide_out_to_bottom</item>
+    </style>
+
+
+    <style name="main_tab_img">
+        <item name="android:layout_width">@dimen/qb_px_20</item>
+        <item name="android:layout_height">@dimen/qb_px_20</item>
+        <item name="android:layout_marginTop">@dimen/qb_px_5</item>
+        <item name="android:layout_centerHorizontal">true</item>
+    </style>
+
+
+
+    <style name="main_tab_tv">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_marginTop">@dimen/qb_px_5</item>
+        <item name="android:textColor">@color/tv_maintab</item>
+        <item name="android:textSize">8sp</item>
     </style>
 
 </resources>

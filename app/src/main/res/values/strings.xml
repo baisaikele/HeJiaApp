@@ -81,4 +81,11 @@
     <string name="newneirong">更新内容：</string>
 
 
+    //main
+    <string name="main_tab_yuansheng">原生家庭</string>
+    <string name="main_tab_xinsheng">新生家庭</string>
+    <string name="main_tab_juhui">聚会</string>
+    <string name="main_tab_dongtai">动态</string>
+    <string name="main_tab_mine">我的</string>
+
 </resources>
