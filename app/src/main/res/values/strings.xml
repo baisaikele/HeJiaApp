@@ -1,6 +1,7 @@
 <resources>
     <string name="page">com.keke.hejia</string>
     <string name="app_name">hejia_wuming</string>
+    <string name="agora_app_id">e68c0c6965904c32bc1208e2cf78645e</string>
 
     //login
     <string name="login_hin_phone">请输入11位手机号码</string>

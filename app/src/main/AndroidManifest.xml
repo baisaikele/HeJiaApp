@@ -10,8 +10,11 @@
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
     <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.GET_TASKS" />
     <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
@@ -25,17 +28,26 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".activity.LoadingActivity"
+            android:name=".activity.FirstActivity"
             android:screenOrientation="portrait"
             android:theme="@style/loginTheme" />
         <activity
             android:name=".activity.LoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.PerfectActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".activity.VideoRoomActivity"
             android:screenOrientation="portrait">
 
         </activity>
+
+        <service android:name=".agora.AgoraVideoService" />
+
         <activity
-            android:name=".activity.PerfectActivity"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait"
+            android:name=".activity.VideoRoomMoreActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

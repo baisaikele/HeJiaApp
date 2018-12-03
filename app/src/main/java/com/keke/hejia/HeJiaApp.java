@@ -3,8 +3,11 @@ package com.keke.hejia;
 import android.app.ActivityManager;
 import android.app.Application;
 import android.content.Context;
+import android.content.Intent;
 import android.support.multidex.MultiDex;
 
+import com.keke.hejia.agora.AgoraVideoService;
+import com.keke.hejia.agora.AgoraVideoUtill;
 import com.keke.hejia.api.Api;
 
 import java.util.List;
@@ -20,6 +23,8 @@ public class HeJiaApp extends Application {
     //    服务器时间戳
     private long timestampCorrection;
 
+    public String uid="0";
+
 
     @Override
     public void onCreate() {
@@ -27,6 +32,8 @@ public class HeJiaApp extends Application {
         if (isMainProcess()) {
             instance=this;
             MultiDex.install(this);
+            AgoraVideoUtill.getInstance();
+            startService(new Intent(this,AgoraVideoService.class));
         }
 
     }

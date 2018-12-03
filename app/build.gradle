@@ -27,6 +27,12 @@ android {
         sourceCompatibility 1.8
         targetCompatibility 1.8
     }
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['/Users/bais/Desktop/project/hejia_wuming/app/libs']
+        }
+    }
+
 }
 
 dependencies {
@@ -57,7 +63,7 @@ dependencies {
     //  权限
     implementation 'com.github.tbruyelle:rxpermissions:0.10.2'
     //    相册
-    implementation (project(':imagepicker')){
+    implementation(project(':imagepicker')) {
         exclude group: 'com.android.support'
     }
     //    even bus
