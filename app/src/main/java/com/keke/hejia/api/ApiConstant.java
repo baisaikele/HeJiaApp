@@ -17,4 +17,9 @@ public class ApiConstant {
      * 登录接口
      */
     public static final String USER_LOGIN = "user/login";
+
+    /**
+     *   获取验证码接口
+     */
+    public static final String USER_SMS_CODE = "user/sms/code";
 }

@@ -101,8 +101,6 @@ public class LoginActivity extends BaseActivity {
                         LogUtils.loge("失败");
                     }
                 });
-
-
                 LauncherActivity.goToPerfectActivity(this);
                 break;
             case R.id.img_wx:
@@ -113,8 +111,19 @@ public class LoginActivity extends BaseActivity {
                     ToastUitl.show("请输入手机号", 2);
                     return;
                 }
-                restart();
-                tvSms.setBackgroundResource(R.drawable.text_share_false);
+                PublicApi.getSmsData(editSrPhone.getText().toString(), new PublicApi.ResponseListener() {
+                    @Override
+                    public void success(Object o) {
+                        restart();
+                        tvSms.setEnabled(false);
+                        tvSms.setBackgroundResource(R.drawable.text_share_false);
+                    }
+
+                    @Override
+                    public void error(String s) {
+                        LogUtils.loge("失败");
+                    }
+                });
                 break;
         }
     }

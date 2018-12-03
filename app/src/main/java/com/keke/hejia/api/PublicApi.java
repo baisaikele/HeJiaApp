@@ -3,6 +3,7 @@ package com.keke.hejia.api;
 import com.keke.hejia.api.bean.RxHjDataObserver;
 import com.keke.hejia.bean.ApiInitBean;
 import com.keke.hejia.bean.LoginBean;
+import com.keke.hejia.bean.SmsLoginBean;
 
 import java.util.HashMap;
 
@@ -58,6 +59,29 @@ public class PublicApi {
                     protected void onFailure(Throwable e, boolean isNetWorkError) throws Exception {
                         listener.error(e.getMessage());
 
+                    }
+                });
+    }
+
+    //获取验证码接口     method   1手机号登录  2绑定手机号
+    public static void getSmsData(String phone, final ResponseListener listener) {
+        HashMap<String, String> map = new HashMap<>();
+        map.put("phone", phone);
+        map.put("method", "1");
+        map.put("sms_type", "0");
+        HashMap<String, String> stringStringHashMap = Api.initMap(map, Api.BaseUrl + ApiConstant.USER_SMS_CODE);
+        Api.getDefault().getSms(ApiConstant.USER_SMS_CODE, stringStringHashMap)
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(new RxHjDataObserver<SmsLoginBean>() {
+                    @Override
+                    protected void onSuccees(SmsLoginBean bean) throws Exception {
+                        listener.success(bean);
+                    }
+
+                    @Override
+                    protected void onFailure(Throwable e, boolean isNetWorkError) throws Exception {
+                        listener.error(e.getMessage());
                     }
                 });
     }
