@@ -23,12 +23,6 @@ public class kkWzConstants {
 
     public static final String UM_APPID = "5bc98400b465f59183000015";
     public static final String UM_SECRET = "89825a81276839cad5d4107d03c367ac";
-    public static final String XIAOMI_ID = "2882303761517882834";
-    public static final String XIAOMI_KEY = "5921788284834";
-    public static final String MEIZU_ID = "1002425";
-    public static final String MEIZU_KEY = "8f242b3dded34dd28a479a985ba423a4";
-    public static final String QQ_APPID = "1107872234";
-    public static final String QQ_APPKEY = "KEY45jsjg87JyB4fkWK";
     public static final String WX_APPID = "wx9ecf1d04ee511581";
     public static final String WX_APPSE = "acdb0972ccf0089b68a575eee97b64cd";
 

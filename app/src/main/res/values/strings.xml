@@ -2,6 +2,7 @@
     <string name="page">com.keke.hejia</string>
     <string name="app_name">壳壳</string>
     <string name="permission_erro">部分功能可能无法使用</string>
+    <string name="login_success">登录成功</string>
 
     //login
     <string name="login_hin_phone">请输入11位手机号码</string>
